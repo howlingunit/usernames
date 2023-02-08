@@ -3,3 +3,4 @@ package-lock.json
 .git/
 .vscode/
 database/apps.sqlite
+env.json
