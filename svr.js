@@ -4,7 +4,7 @@ import * as api from './lib/api.js'
 const app = express();
 
 app.use((req, res, next) => {
-  res.header('access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Origin', '*');
   next();
 })
 
