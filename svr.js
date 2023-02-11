@@ -3,6 +3,11 @@ import * as api from './lib/api.js'
 
 const app = express();
 
+app.use((req, res, next) => {
+  res.header('access-Control-Allow_Origin', '*');
+  next();
+})
+
 app.use(express.static('static'));
 
 app.get('/all-usernames', api.allUsers);
