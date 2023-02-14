@@ -10,7 +10,7 @@ export default function Input(props) {
         event.preventDefault()
 
         console.log(props.username)
-        let res = await fetch('http://dev.tyway.net:8080/add-username', {
+        let res = await fetch('https://usernames.tyway.net/add-username', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -30,6 +30,7 @@ export default function Input(props) {
 
 
         if(res.valid){
+            props.setUsername(res.username);
             props.setSubmitted(true);
         }
         

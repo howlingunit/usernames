@@ -16,9 +16,9 @@ export default function Output(props) {
 
     React.useEffect(() => {
         (async () =>{
-            let res = await fetch(`http://dev.tyway.net:8080/amt-of-names?username=${props.username}`);
+            let res = await fetch(`https://usernames.tyway.net/amt-of-names?username=${props.username}`);
             res = await res.json();
-            setAmtOf(res.amt - 1); // take one to account for the inputted username
+            setAmtOf(res.amt);
             if(res.msg) {setMsg(res.msg)}
     })();}, [amtOf])
     
