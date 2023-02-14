@@ -4,3 +4,4 @@ package-lock.json
 .vscode/
 database/apps.sqlite
 env.json
+coolNames.json
