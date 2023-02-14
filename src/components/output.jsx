@@ -18,13 +18,13 @@ export default function Output(props) {
         (async () =>{
             let res = await fetch(`https://usernames.tyway.net/amt-of-names?username=${props.username}`);
             res = await res.json();
-            setAmtOf(res.amt);
+            setAmtOf(res.amt - 1); // to account for the name just added
             if(res.msg) {setMsg(res.msg)}
     })();}, [amtOf])
     
     return (
         <div className='output'>
-            <h1>Woah, {props.username} has been used {amtOf} {amtOf <= 1 ? 'time' : 'times'}</h1>
+            {amtOf ? <h1>Woah, {props.username} has been used {amtOf} {amtOf <= 1 ? 'time' : 'times'}</h1> : <h1>Woah, you are the first to submit {props.username}</h1>}
 
             {msg && <p>{msg}</p>}
 
