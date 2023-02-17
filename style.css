@@ -38,3 +38,18 @@ button:hover {
   box-shadow: 0px 0px 7px #b8b8b8;
 
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin: 1rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer > p {
+  color: #444;
+}
+footer > p > a{
+  color: #777;
+}

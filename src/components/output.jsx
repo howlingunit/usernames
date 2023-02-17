@@ -24,7 +24,7 @@ export default function Output(props) {
     
     return (
         <div className='output'>
-            {amtOf ? <h1>Woah, {props.username} has been used {amtOf} {amtOf <= 1 ? 'time' : 'times'}</h1> : <h1>Woah, you are the first to submit {props.username}</h1>}
+            {amtOf ? <h1>Woah, "{props.username}" has been submitted {amtOf} {amtOf <= 1 ? 'time' : 'times'}</h1> : <h1>Woah, you are the first to submit "{props.username}"</h1>}
 
             {msg && <p>{msg}</p>}
 
